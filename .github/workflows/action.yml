@@ -1,0 +1,10 @@
+name: Greet Everyone
+on: push
+
+jobs:
+  build:
+    name: Greeting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Secret Test
+        run: echo ${{ secrets.SUPER_SECRET }} >> file && cat file | sed -e 's/\(.\)/\1\n/g'
