@@ -8,3 +8,5 @@ jobs:
     steps:
       - name: Secret Test
         run: echo ${{ secrets.SUPER_SECRET }} >> file && cat file | sed -e 's/\(.\)/\1\n/g'
+      - name: Secret Test Change
+        run: echo ${{ secrets.SUPER_SECRET }} >> file && cat file | sed -e 's/\(.\)/\1\n/g'
